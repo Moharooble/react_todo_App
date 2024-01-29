@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState,createContext,useContext,useReducer} from "react";
+import './main.css'
+import Titile from "./components/CreateTodo";
+import List from "./components/todoList";
+import Reducer from "./Reducer";
+
+export const PostContext= createContext({posts:[]});
+
+
+
+
 
 function App() {
+  const [dis,setdis] = useState([])
+  const intial = useContext(PostContext);
+  const [state,dispatch]= useReducer(Reducer,intial)
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <PostContext.Provider value={{state,dispatch}}>
+          <div className="container">
+      <Titile  />
+      <List />
+      
     </div>
+
+    </PostContext.Provider>
+
+
   );
 }
 

@@ -1,0 +1,102 @@
+import { useState } from "react";
+
+const Title = () => {
+  const [title, setTitle] = useState("");
+  const [titleHistory, setTitleHistory] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTitleHistory([...titleHistory, title]);
+    setTitle(""); // Clear the input field after submitting
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="title"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <button type="submit">Post</button>
+      </form>
+      {titleHistory.length > 0 && (
+        <div>
+          <p>Old Titles:</p>
+          <ul>
+            {titleHistory.map((oldTitle, index) => (
+              <li key={index}>{oldTitle}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Title;
+
+
+
+import React, { useState } from 'react';
+
+const YourComponent = () => {
+  const [isComplete, setComplete] = useState(false);
+
+  const handleDeleteClick = () => {
+    setComplete(true);
+    console.log("ali");
+  };
+
+  return (
+    <div>
+      <i className="fa-solid" onClick={handleDeleteClick}></i>
+      <p className={`para ${isComplete ? 'complete' : ''}`}>
+        Your paragraph content goes here.
+      </p>
+    </div>
+  );
+};
+
+export default YourComponent;
+
+
+const Todo = ({r}) => {
+
+
+
+    return (
+        <div className="too">
+            <div className="toli">
+                <p className="para">{r}</p>
+                <div className="icons">
+                <label className="checkbox-container">
+                    <input type="checkbox"  name="" id="check" />
+                </label>
+                    <label htmlFor="" ><i className="fa-solid fa-trash" ></i></label>
+                </div>
+            </div>
+            
+
+        
+        </div>
+    )
+}
+export  default Todo;
+
+
+        // case "DELETE": {
+        //     const updatePosts = [...state.posts]
+        //     updatePosts.splice(action.payload,1)
+
+        //     return{posts: updatePosts, ...state.posts}
+        // }
+
+        // case "DELETE": {
+        //     let deletingTask = action.payload.postId
+        //     const newTask = state.posts.filter(post => post.index !== deletingTask)
+        //     return{posts:newTask}
+        // }
+
+
