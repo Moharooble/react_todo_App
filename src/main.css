@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    padding: 15px;
+    margin-top: 80px;
+    border-radius: 10px;
+
+}
+.todo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.todo input{
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background:none;
+    border-bottom: solid 1px black;
+    outline: none;
+}
+
+.todo button{
+    margin: 5px;
+    width: 50px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+.too{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(240, 239, 239);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 2px auto; */
+
+}
+.todoList{
+    width: 100%;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+}
+.todoList button{
+    margin: auto;
+    width: 70px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    left: 80px;
+    cursor: pointer;
+
+}
+.toli{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    position: relative;
+    right: 0;
+    left: 85px;
+
+}
+
+.icons i{
+    margin: 0 12px;
+    cursor: pointer;
+    color: red;
+}
+
+
+.para{
+    width: 100px;
+}
+
+/* Style for the checkbox */
+#check{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid gray; /* Blue border */
+    border-radius: 50%; /* Circular border */
+    width: 17px; /* Adjust the size as needed */
+    height: 17px; /* Adjust the size as needed */
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    position: relative;
+}
+
+#check:checked {
+    background-color: green; /* Green background when checked */
+}
+#check:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px; /* Adjust the width of the checkmark line */
+    height: 2px; /* Adjust the height of the checkmark line */
+    background-color: white; /* Color of the checkmark line */
+    transform-origin: 0% 50%;
+    transform: rotate(-50deg);
+}
+#check:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; /* Adjust the width of the checkmark line */
+    height: 2px; /* Adjust the height of the checkmark line */
+    background-color: white; /* Color of the checkmark line */
+    transform-origin: 0% 50%;
+    transform: rotate(-135deg);
+}
+
+.complate{
+    text-decoration: line-through;
+    color: rgb(126, 124, 124);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -100%; /* Initially off-screen */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s forwards; /* Animation duration 0.5 seconds */
+  }
+  
+  @keyframes slideDown {
+    from {
+      top: -100%; /* Starting position off-screen */
+    }
+    to {
+      top: 20%; /* Ending position */
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 0;
+    padding: 4px;
+    border-radius: 100%;
+    border: solid 2px red;
+  }
+  .fa-xmark {
+    color: red;
+  }
+  
+  
+
+  
+
+  
+
+      
+
+
