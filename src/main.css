@@ -211,15 +211,21 @@ body{
   }
 
   .icon {
+    background-color: red;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 10px 0 0;
     padding: 4px;
     border-radius: 100%;
-    border: solid 2px red;
+    
   }
   .fa-xmark {
-    color: red;
+    color: white;
+    
+
   }
   
   
